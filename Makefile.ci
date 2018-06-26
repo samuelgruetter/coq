@@ -9,6 +9,7 @@
 ##########################################################################
 
 CI_TARGETS=ci-bignums \
+    ci-bedrock2 \
     ci-color \
     ci-compcert \
     ci-coq-dpdgraph \

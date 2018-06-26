@@ -309,6 +309,9 @@ validate:edge+flambda:
 ci-bignums:
   <<: *ci-template
 
+ci-bedrock2:
+  <<: *ci-template
+
 ci-color:
   <<: *ci-template-flambda
 

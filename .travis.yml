@@ -70,6 +70,9 @@ matrix:
       - TEST_TARGET="ci-bignums"
     - if: NOT (type = pull_request)
       env:
+      - TEST_TARGET="ci-bedrock2"
+    - if: NOT (type = pull_request)
+      env:
       - TEST_TARGET="ci-color"
     - if: NOT (type = pull_request)
       env:
