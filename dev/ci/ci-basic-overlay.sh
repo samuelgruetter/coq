@@ -151,7 +151,7 @@
 # bedrock2
 ########################################################################
 : "${bedrock2_CI_BRANCH:=master}"
-: "${bedrock2_CI_GITURL:=https://github.com/mit-plv/bedrock2-ci}"
+: "${bedrock2_CI_GITURL:=https://github.com/mit-plv/bedrock2}"
 
 ########################################################################
 # Equations
