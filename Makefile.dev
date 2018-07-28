@@ -182,6 +182,8 @@ noreal: unicode logic arith bool zarith qarith lists sets fsets \
 ### 4) plugins
 ################
 
+OMEGAVO:=$(filter plugins/omega/%, $(PLUGINSVO))
+ROMEGAVO:=$(filter plugins/romega/%, $(PLUGINSVO))
 MICROMEGAVO:=$(filter plugins/micromega/%, $(PLUGINSVO))
 QUOTEVO:=$(filter plugins/quote/%, $(PLUGINSVO))
 RINGVO:=$(filter plugins/setoid_ring/%, $(PLUGINSVO))
@@ -194,6 +196,8 @@ CCVO:=
 DERIVEVO:=$(filter plugins/derive/%, $(PLUGINSVO))
 LTACVO:=$(filter plugins/ltac/%, $(PLUGINSVO))
 
+omega: $(OMEGAVO) $(OMEGACMO) $(ROMEGAVO) $(ROMEGACMO)
+micromega: $(MICROMEGAVO) $(MICROMEGACMO) $(CSDPCERT)
 setoid_ring: $(RINGVO) $(RINGCMO)
 nsatz: $(NSATZVO) $(NSATZCMO)
 extraction: $(EXTRACTIONCMO) $(EXTRACTIONVO)
@@ -203,7 +207,7 @@ rtauto: $(RTAUTOVO) $(RTAUTOCMO)
 btauto: $(BTAUTOVO) $(BTAUTOCMO)
 ltac: $(LTACVO) $(LTACCMO)
 
-.PHONY: setoid_ring nsatz extraction
+.PHONY: omega micromega setoid_ring nsatz extraction
 .PHONY: funind cc rtauto btauto ltac
 
 # For emacs:
