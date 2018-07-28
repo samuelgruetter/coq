@@ -77,8 +77,6 @@ Hint Extern 10 (~ (_ > _)%Z) => abstract lia: zarith.
 
 Hint Extern 10 False => abstract lia: zarith.
 
-Ltac omega := lia.
-
 
 (* Local Variables: *)
 (* coding: utf-8 *)
